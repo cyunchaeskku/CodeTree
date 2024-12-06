@@ -1,4 +1,4 @@
-dxs, dys = [0,-1,1,0], [1,0,0,-1]
+dxs, dys = [0,1,-1,0], [1,0,0,-1]
 
 def in_range(x, y):
     return 1 <= x and x <= n and 1 <= y and y <= n
