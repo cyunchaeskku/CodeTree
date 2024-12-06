@@ -28,17 +28,15 @@ cnt = 1
 a[x-1][y-1] = cnt
 cnt += 1
 
-print(a)
+# print(a)
 
 dir_num = 0
 
-while True:
+while cnt <= r * c:
     nx, ny = x + dxs[dir_num], y + dys[dir_num]
-    if in_range(nx, ny) and a[nx-1][ny-1] != 0:
+    if in_range(nx, ny) and a[nx-1][ny-1] == 0:
         a[nx-1][ny-1] = cnt
         cnt += 1
-        if cnt > r * c:
-            break
     else:
         dir_num = (dir_num+1)%4
 
