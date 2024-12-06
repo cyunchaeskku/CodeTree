@@ -40,4 +40,7 @@ while cnt <= r * c:
     else:
         dir_num = (dir_num+1)%4
 
-print(a)
+for i in range(r):
+    for j in range(c):
+        print(a[i][j],end=' ')
+    print()
