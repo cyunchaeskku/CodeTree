@@ -37,6 +37,7 @@ while cnt <= r * c:
     if in_range(nx, ny) and a[nx-1][ny-1] == 0:
         a[nx-1][ny-1] = cnt
         cnt += 1
+        x, y= nx, ny
     else:
         dir_num = (dir_num+1)%4
 
