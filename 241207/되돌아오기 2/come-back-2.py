@@ -17,7 +17,7 @@ for i in range(len(command)):
     if command[i] == 'L':
         dir_num = dir_num-1
         if dir_num < 0:
-            dir_num == 3
+            dir_num = 3
     ans += 1
 if x == 0 and y == 0:
     print(ans) 
