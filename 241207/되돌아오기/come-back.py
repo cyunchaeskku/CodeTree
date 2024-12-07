@@ -22,7 +22,7 @@ for i in range(n):
         ans += 1
         if x == 0 and y == 0:
             print(ans)
-            break
+            exit(0)
 
 print(-1)
     
