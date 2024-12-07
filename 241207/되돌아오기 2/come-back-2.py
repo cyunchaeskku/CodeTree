@@ -4,7 +4,7 @@ dir_num = 3
 ans = 0
 x, y = 0,0 
 
-command = input()
+command = input().rstrip()
 
 for i in range(len(command)):
     if x == 0 and y == 0 and ans:
