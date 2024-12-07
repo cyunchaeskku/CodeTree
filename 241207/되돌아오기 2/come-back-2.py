@@ -7,7 +7,7 @@ x, y = 0,0
 command = input()
 
 for i in range(len(command)):
-    if x == 0 and y == 0:
+    if x == 0 and y == 0 and ans:
         print(ans)
         exit(0)
     if command[i] == 'F':
