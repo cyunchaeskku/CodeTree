@@ -19,12 +19,7 @@ for i in range(len(command)):
         if dir_num < 0:
             dir_num == 3
     ans += 1
-print(-1)
-'''
-0 -> 3
-1 -> 0
-2 -> 1
-3 -> 2
-
-
-'''
+if x == 0 and y == 0:
+    print(ans) 
+else:
+    print(-1)
