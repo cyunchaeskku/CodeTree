@@ -1,6 +1,6 @@
 dxs, dys = [1,0,-1,0], [0,-1,0,1]
 
-dir_num = 1
+dir_num = 3
 ans = 0
 x, y = 0,0 
 
@@ -15,7 +15,7 @@ for i in range(len(command)):
     if command[i] == 'R':
         dir_num = (dir_num+1) % 4
     if command[i] == 'L':
-        dir_num = (dir_num-1) % 4
+        dir_num = dir_num-1
         if dir_num < 0:
             dir_num == 3
     ans += 1
