@@ -22,4 +22,7 @@ while cnt <= n *m:
     else:
         dir_num = (dir_num+1)%4
 
-print(arr)
+for i in range (n):
+    for j in range (m):
+        print(arr[n][m],end=' ')
+    print()
