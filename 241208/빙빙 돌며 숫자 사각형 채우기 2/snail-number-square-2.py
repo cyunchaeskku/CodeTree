@@ -15,10 +15,11 @@ arr[r][c] = cnt
 cnt += 1
 
 while cnt <= n *m:
-    r, c = r + drs[dir_num], c + dcs[dir_num]
-    if in_range(r,c) and not arr[r][c]:
-        arr[r][c] = cnt
+    nr, nc = r + drs[dir_num], c + dcs[dir_num]
+    if in_range(nr,nc) and arr[nr][nc] == 0:
+        arr[nr][nc] = cnt
         cnt += 1
+        r, c= nr, nc
     else:
         dir_num = (dir_num+1)%4
 
