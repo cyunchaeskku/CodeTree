@@ -33,10 +33,10 @@ if n+1 <= k and k <= 2*n:
 if 2*n+1 <= k and k <= 3*n:
     dir_num = 3
     r = n-1
-    c = 2 - (k - (2*n) - 1)
+    c = (n-1) - (k - (2*n) - 1)
 if 3*n+1 <= k and k <= 4*n:
     dir_num = 0
-    r = 2 - (k - 3*n - 1)
+    r = (n-1) - (k - 3*n - 1)
     c = 0
 
 
