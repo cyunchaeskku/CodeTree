@@ -24,5 +24,5 @@ while cnt <= n *m:
 
 for i in range (n):
     for j in range (m):
-        print(arr[n][m],end=' ')
+        print(arr[i][j],end=' ')
     print()
