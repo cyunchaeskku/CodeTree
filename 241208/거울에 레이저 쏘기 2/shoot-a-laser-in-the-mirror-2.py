@@ -45,12 +45,12 @@ if a[r][c] == '/':
         dir_num-=1
         if dir_num<0:
             dir_num = 3
-    if dir_num == 1 or dir_num == 3:
+    elif dir_num == 1 or dir_num == 3:
         dir_num = (dir_num+1)%4
 else:
     if dir_num == 0 or dir_num == 2:
         dir_num = (dir_num+1)%4
-    if dir_num == 1 or dir_num == 3:
+    elif dir_num == 1 or dir_num == 3:
         dir_num-=1
         if dir_num<0:
             dir_num = 3
