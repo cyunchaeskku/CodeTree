@@ -14,7 +14,7 @@ r, c = 0, 0
 arr[r][c] = cnt
 cnt += 1
 
-while True:
+while cnt <= n *m:
     r, c = r + drs[dir_num], c + dcs[dir_num]
     if in_range(r,c) and not arr[r][c]:
         arr[r][c] = cnt
