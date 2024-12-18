@@ -22,21 +22,22 @@ a[r][c] = chr(ascii_num)
 ascii_num += 1
 cnt = 1
 
-while True:
+while cnt < n * m:
     nr, nc = r+drs[dir_num], c+dcs[dir_num]
     if in_range(nr, nc) and a[nr][nc] == 0:
         r, c = nr, nc
         a[r][c] = chr(ascii_num)
         ascii_num += 1
         cnt += 1
-        if cnt >= n *m:
-            break
+        # if cnt >= n *m:
+        #     break
         if ascii_num > 90:
             ascii_num = 65
     else:
         dir_num = (dir_num+1)%4
 
-for i in range(n):
-    for j in range(m):
-        print(a[i][j], end = ' ')
-    print()
+# for i in range(n):
+#     for j in range(m):
+#         print(a[i][j], end = ' ')
+#     print()
+print("\n".join(" ".join(row) for row in a))
