@@ -17,7 +17,7 @@ for i in range(n):
 ans = 0
 dir_num = 3
 r, c = math.ceil(n/2) - 1, math.ceil(n/2) - 1
-# ans += a[r][c]
+ans += a[r][c]
 
 for iter in range(t):
     command = commands[iter]
