@@ -29,7 +29,8 @@ while cnt <= n * n:
         if dir_num < 0:
             dir_num = 3
 
-for i in range(n):
-    for j in range(n):
-        print(a[i][j], end = ' ')
-    print()
+# for i in range(n):
+#     for j in range(n):
+#         print(a[i][j], end = ' ')
+#     print()
+print("\n".join(" ".join(row) for row in a))
