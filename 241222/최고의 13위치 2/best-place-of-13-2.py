@@ -18,7 +18,7 @@ for i in range(n-1):
 
 for i in range(n-1):
     for j in range(n-4):
-        for l in range(n-2):
+        for l in range(j+1, n-2):
             sum = a[i][j] + a[i][j+1] + a[i][j+2] + a[i][l] + a[i][l+1] + a[i][l+2]
             max_ans = max (max_ans, sum)
 
