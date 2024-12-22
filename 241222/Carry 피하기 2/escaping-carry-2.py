@@ -7,6 +7,7 @@ for i in range(n):
     a.append( int(sys.stdin.readline().rstrip()) )
 
 max_ans = -sys.maxsize
+carry_flag = False
 
 for i in range(n-2):
     for j in range(i+1, n-1):
@@ -20,9 +21,13 @@ for i in range(n-2):
             elif ((a[i] // 1000) % 10) + ((a[j] // 1000) % 10) + ((a[k] // 1000) % 10) >= 10:
                 continue
             elif ((a[i] // 10000) % 10) + ((a[j] // 10000) % 10) + ((a[k] // 10000) % 10) >= 10:
-                print(-1)
+                continue
             else:
+                carry_flag = True
                 sum = a[i] + a[j] + a[k]
                 max_ans = max(max_ans,sum)
 
+if carry_flag == False:
+    print(-1)
+    exit(0)
 print(max_ans)
