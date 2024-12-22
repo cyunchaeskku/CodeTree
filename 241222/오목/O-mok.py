@@ -39,4 +39,4 @@ for i in range(19):
                 exit(0)
 
 
-
+print(0)
