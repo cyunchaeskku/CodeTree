@@ -1,20 +1,17 @@
 import sys
 
-s, n = map(int, input().split())
+n, s = map(int, input().split())
 
 a = list(map(int, input().split()))
+
+print(a)
 
 min_ans = sys.maxsize
 
 for i in range(n-1):
     for j in range(i+1, n):
-        sum = 0
-        for k in range(n):
-            if k == i or k == j:
-                continue
-            else:
-                sum += a[k]
-        sum_diff = abs(s - sum)
+        sum_ans = sum(a) - a[i] - a[j]
+        sum_diff = abs(s - sum_ans)
         min_ans = min(min_ans, sum_diff)
 
 print(min_ans)
