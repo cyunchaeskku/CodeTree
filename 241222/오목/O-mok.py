@@ -1,6 +1,8 @@
 import sys
 
-drs, dcs = [0,1,0,-1],[1,0,-1,0]
+# drs, dcs = [0,1,0,-1],[1,0,-1,0]
+
+drs, dcs = [0,1,1,1,0,-1,-1,-1],[1,1,0,-1,-1,-1,0,1]
 
 def in_range(r, c):
     return 0 <= r and r < 19 and 0 <= c and c < 19
@@ -17,7 +19,7 @@ dir_num = -1
 for i in range(19):
     for j in range(19):
         if a[i][j] != 0:
-            for k in range(4):
+            for k in range(8):
                 ni, nj = i + drs[k], j + dcs[k]
                 if a[ni][nj] == a[i][j]:
                     dir_num = k
@@ -31,7 +33,7 @@ for i in range(19):
                     cnt += 1
             if cnt == 4:
                 print(a[r][c])
-                dir_num = (dir_num+2)%4
+                dir_num = (dir_num+4)%8
                 nr, nc = r + 2 * drs[dir_num], c + 2 * dcs[dir_num]
                 print(nr+1, nc+1)
                 exit(0)
