@@ -21,7 +21,7 @@ for i in range(19):
         if a[i][j] != 0:
             for k in range(8):
                 ni, nj = i + drs[k], j + dcs[k]
-                if a[ni][nj] == a[i][j]:
+                if in_range(ni, nj) and a[ni][nj] == a[i][j]:
                     dir_num = k
                     break
             r, c = i, j
