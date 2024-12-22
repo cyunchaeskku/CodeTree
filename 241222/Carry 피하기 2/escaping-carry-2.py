@@ -20,7 +20,7 @@ for i in range(n-2):
             elif ((a[i] // 1000) % 10) + ((a[j] // 1000) % 10) + ((a[k] // 1000) % 10) >= 10:
                 continue
             elif ((a[i] // 10000) % 10) + ((a[j] // 10000) % 10) + ((a[k] // 10000) % 10) >= 10:
-                continue
+                print(-1)
             else:
                 sum = a[i] + a[j] + a[k]
                 max_ans = max(max_ans,sum)
