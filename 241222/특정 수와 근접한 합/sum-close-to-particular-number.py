@@ -4,8 +4,6 @@ n, s = map(int, input().split())
 
 a = list(map(int, input().split()))
 
-print(a)
-
 min_ans = sys.maxsize
 
 for i in range(n-1):
