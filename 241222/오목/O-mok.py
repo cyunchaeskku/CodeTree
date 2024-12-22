@@ -28,7 +28,7 @@ for i in range(19):
             cnt = 0
             for k in range(5):
                 nr, nc = r + drs[dir_num], c + dcs[dir_num]
-                if a[nr][nc] == a[r][c]:
+                if in_range(nr,nc) and a[nr][nc] == a[r][c]:
                     r, c = nr, nc
                     cnt += 1
             if cnt == 4:
