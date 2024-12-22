@@ -8,6 +8,7 @@ min_ans = sys.maxsize
 
 for i in range(n-1):
     for j in range(i+1, n):
+        sum = 0
         for k in range(n):
             if k == i or k == j:
                 continue
