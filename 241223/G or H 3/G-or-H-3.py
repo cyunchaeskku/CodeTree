@@ -4,7 +4,7 @@ max_ans = -sys.maxsize
 
 n, k = map(int, input().split())
 
-a = [0 for _ in range(10_000)]
+a = [0 for _ in range(10_001)]
 
 for i in range(n):
     index, alphabet = input().split()
