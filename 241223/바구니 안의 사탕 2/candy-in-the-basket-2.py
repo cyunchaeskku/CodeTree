@@ -7,7 +7,7 @@ max_ans = -sys.maxsize
 
 for i in range(n):
     candy, index = map(int, input().split())
-    a[index - 1] = candy
+    a[index - 1] += candy
 
 for i in range(0 + k ,200 - k):
     _sum = sum(a[i - k : i + k + 1])
