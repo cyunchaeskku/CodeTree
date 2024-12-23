@@ -1,6 +1,6 @@
 import sys
 
-max_ans = -sys.maxsize
+max_ans = 0
 
 n, k = map(int, input().split())
 
