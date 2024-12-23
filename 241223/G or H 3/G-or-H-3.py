@@ -11,6 +11,7 @@ for i in range(n):
     a[int(index) - 1] = alphabet
 
 for i in range(n - k + 1):
+    # print("i:", i)
     sum = 0
     for j in range(i, i + k + 1):
         if a[j] == 'G':
