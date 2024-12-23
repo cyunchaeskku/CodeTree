@@ -10,7 +10,7 @@ for i in range(n):
     index, alphabet = input().split()
     a[int(index) - 1] = alphabet
 
-for i in range(n - k + 1):
+for i in range(10_000 - k ):
     sum = 0
     for j in range(i, i + k + 1):
         if a[j] == 'G':
