@@ -8,7 +8,7 @@ a = [0 for _ in range(10_000)]
 
 for i in range(n):
     index, alphabet = input().split()
-    a[int(index - 1)] = alphabet
+    a[int(index) - 1] = alphabet
 
 for i in range(n - k + 1):
     sum = 0
