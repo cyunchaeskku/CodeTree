@@ -1,16 +1,16 @@
 import sys
 
-max_ans = 0
+max_ans = -sys.maxsize
 
 n, k = map(int, input().split())
 
-a = [0 for _ in range(10_001)]
+a = [0 for _ in range(10_000)]
 
 for i in range(n):
     index, alphabet = input().split()
-    a[int(index)] = alphabet
+    a[int(index - 1)] = alphabet
 
-for i in range(1, n - k + 2):
+for i in range(n - k + 1):
     sum = 0
     for j in range(i, i + k + 1):
         if a[j] == 'G':
