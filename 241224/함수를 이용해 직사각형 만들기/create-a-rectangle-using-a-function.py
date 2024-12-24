@@ -2,6 +2,6 @@ n, m = map(int, input().split())
 
 def print_rect(n,m):
     for i in range(n):
-        print("*" * m)
+        print('1' * m)
 
-print(print_rect(n,m))
+print_rect(n,m)
