@@ -7,18 +7,14 @@ a2, b2, c2 = map(int, input().split())
 
 cnt = 0
 
-def change(a):
-    if a == n:
-        return 0
-    else:
-        return a
 
 '''
 min(i-a1, n-(i-a1))
 '''
 
 def get_min(i, a1):
-    return min(abs(i-a1),abs(n-(i-a1))) <= 2
+    # return min(abs(i-a1),abs(n-(i-a1))) <= 2
+    return abs(i - a1) <= 2 or abs(i - a1) >= n-2
 
 for i in range(1,n+1):
     for j in range(1, n+1):
