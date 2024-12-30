@@ -36,7 +36,7 @@ for i in range(1,10):
                     succeeded = False
                     break
 
-                if succeeded:
-                    cnt += 1
+            if succeeded:
+                cnt += 1
 
 print(cnt)
