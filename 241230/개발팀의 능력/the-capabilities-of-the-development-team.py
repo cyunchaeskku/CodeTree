@@ -15,7 +15,7 @@ def get_diff(i,j,k):
 for i in range(len(a)):
     for j in range(len(a)):
         for k in range(len(a)):
-            if i == j or j ==k or k == i:
+            if i == j or j == k or k == i:
                 continue
 
             if a[i] + a[j] == a[k] or a[k] == sum(a) - (a[i] + a[j]) -  a[k] or sum(a) - (a[i] + a[j]) -  a[k] == a[i] + a[j]:
@@ -23,4 +23,7 @@ for i in range(len(a)):
 
             min_ans = min(min_ans, get_diff(i,j,k))
 
-print(min_ans)
+if min_ans > 5000:
+    print(-1)
+else:
+    print(min_ans)
