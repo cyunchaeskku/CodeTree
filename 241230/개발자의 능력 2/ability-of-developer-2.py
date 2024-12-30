@@ -24,8 +24,8 @@ for i in range(len(a)):
                     # sum2 = a[k] + a[l]
                     # sum3 = sum(a) - sum1 - sum2
                     # print(max(sum1, sum2, sum3) , min(sum1, sum2, sum3))
-                    if get_diff(i,j,k,l) == 0:
-                        print(a[i],a[j],a[k],a[l])
+                    # if get_diff(i,j,k,l) == 0:
+                    #     print(a[i],a[j],a[k],a[l])
                     min_ans = min( get_diff(i,j,k,l), min_ans )
 
 
