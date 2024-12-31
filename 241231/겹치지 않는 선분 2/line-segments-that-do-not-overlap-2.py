@@ -10,33 +10,23 @@ n개의 선분
 
 n = int(input())
 
-# x1s = []
-# x2s = []
+x1s = []
+x2s = []
 cnt = 0
+dic = {}
 
-# for _ in range(n):
-#     x1, x2 = map(int, input().split())
-#     x1s.append(x1)
-#     x2s.append(x2)
+for _ in range(n):
+    x1, x2 = map(int, input().split())
+    x1s.append(x1)
+    x2s.append(x2)
 
-a = [
-    tuple(map(int, input().split()))
-    for _ in range(n)
-]
+    dic[x1] = x2
 
-a.sort()
+x1s.sort()
+x2s.sort()
 
 for i in range(n):
-
-    if i == 0:
-        if a[i][1] < a[i+1][1]:
-            cnt += 1
-    elif i == n-1:
-        if a[i][0] > a[i-1][0]:
-            cnt += 1
-    else:
-        if a[i][1] > a[i-1][1] and a[i][1] < a[i+1][1]:
-            cnt += 1
+    if dic[x1s[i]] == x2s[i]:
+        cnt += 1
 
 print(cnt)
-
