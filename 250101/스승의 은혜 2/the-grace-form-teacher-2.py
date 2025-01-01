@@ -30,6 +30,7 @@ for i in range(n):
         if i == j:
             # _a[j] *= 2
             _a[j] = int(_a[j]*2)
-    ans = max(ans, cnt)
+
+        ans = max(ans, cnt)
         
 print(ans)
