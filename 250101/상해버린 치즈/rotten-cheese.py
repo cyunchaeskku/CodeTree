@@ -12,8 +12,8 @@ eat_data = [
     for _ in range(d)
 ]
 
-cheese_list = [0 for _ in range(101)] # 1번부터 50번까지의 치즈. 값이 아픈 사람 수와 동일하면, 상한 치즈.
-patients_list = [False for _ in range(101)] # 1번부터 50번 사람. True면 약 줘야 됨
+cheese_list = [0 for _ in range(1001)] # 1번부터 50번까지의 치즈. 값이 아픈 사람 수와 동일하면, 상한 치즈.
+patients_list = [False for _ in range(1001)] # 1번부터 50번 사람. True면 약 줘야 됨
 
 
 sick_data = []
@@ -39,13 +39,11 @@ for v in eat_data:
     else:
         if time < sick_dic[person]: # 치즈를 먹은 시각이, 아프게 된 시각보다 전이라면
             cheese_list[cheese] += 1
-        if time >= sick_dic[person]:
-            cheese_list[cheese] = -sys.maxsize
             
 for v in eat_data:
     person, cheese, time = v
 
-    if cheese_list[cheese] == s:
+    if cheese_list[cheese] >= s:
         patients_list[person] = True
 
 ans =0
@@ -53,5 +51,10 @@ for i in range(len(patients_list)):
     if patients_list[i] == True:
         ans += 1
 print(ans)
-# print(cheese_list)
-# print(patients_list)
+
+# for i in range(len(cheese_list)):
+#     if cheese_list[i] > 0:
+#         print(i, cheese_list[i])
+# for i in range(len(patients_list)):
+#     if patients_list[i] == True:
+#         print(i)
