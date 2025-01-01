@@ -10,11 +10,12 @@ _a = [
 ans = -sys.maxsize
 
 for i in range(n):
-    price = 0
-    cnt = 0
     for j in range(n):
+        price = 0
+        cnt = 0
         if i == j:
-            _a[j] /= 2
+            # _a[j] /= 2
+            _a[j] = int(_a[j]/2)
         a = sorted(_a)
 
         for k in range(n):
@@ -23,9 +24,9 @@ for i in range(n):
                 break
             else:
                 cnt += 1
-
         if i == j:
-            _a[j] *= 2
+            # _a[j] *= 2
+            _a[j] = int(_a[j]*2)
     ans = max(ans, cnt)
         
 print(ans)
