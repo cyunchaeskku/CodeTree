@@ -2,7 +2,7 @@ import sys
 
 '''
 n개의 사람 m개의 치즈 먹음.
-
+정확히 하나의 치즈만 상함...
 '''
 
 n, m, d, s = map(int, input().split())
@@ -11,11 +11,6 @@ eat_data = [
     tuple(map(int, input().split()))
     for _ in range(d)
 ]
-
-# sick_data = [
-#     tuple(map(int, input().split()))
-#     for _ in range(s)
-# ]
 
 cheese_list = [0 for _ in range(51)] # 1번부터 50번까지의 치즈. 값이 아픈 사람 수와 동일하면, 상한 치즈.
 patients_list = [False for _ in range(51)] # 1번부터 50번 사람. True면 약 줘야 됨
@@ -42,7 +37,7 @@ for v in eat_data:
     if person not in sick_people:
         continue
     else:
-        if time < sick_dic[person]: # 치즈를 먹은 시각이, 아프게 된 시각보다 전이라면
+        if time + 1 <= sick_dic[person]: # 치즈를 먹은 시각이, 아프게 된 시각보다 전이라면
             cheese_list[cheese] += 1
             
 for v in eat_data:
@@ -56,3 +51,5 @@ for i in range(len(patients_list)):
     if patients_list[i] == True:
         ans += 1
 print(ans)
+# print(cheese_list)
+# print(patients_list)
