@@ -31,14 +31,19 @@ for _ in range(s):
 for v in sick_data:
     sick_people.append(v[0])
 
+temp = []
+
+
 for v in eat_data:
     person, cheese, time = v
     
     if person not in sick_people:
         continue
     else:
-        if time < sick_dic[person]: # 치즈를 먹은 시각이, 아프게 된 시각보다 전이라면
-            cheese_list[cheese] += 1
+        if time + 1 <= sick_dic[person]: # 치즈를 먹은 시각이, 아프게 된 시각보다 전이라면
+            if (person, cheese) not in temp:
+                cheese_list[cheese] += 1
+                temp.append((person, cheese))
             
 for v in eat_data:
     person, cheese, time = v
@@ -53,8 +58,9 @@ for i in range(len(patients_list)):
 print(ans)
 
 # for i in range(len(cheese_list)):
-#     if cheese_list[i] > 0:
+#     if cheese_list[i] >= s:
 #         print(i, cheese_list[i])
+# print("-------")
 # for i in range(len(patients_list)):
 #     if patients_list[i] == True:
 #         print(i)
