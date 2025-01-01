@@ -14,6 +14,8 @@ for i in range(n):
     for j in range(n):
         price = 0
         cnt = 0
+        if i != j:
+            continue
         if i == j:
             # _a[j] /= 2
             _a[j] = int(_a[j]/2)
