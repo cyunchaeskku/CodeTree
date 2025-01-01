@@ -23,8 +23,11 @@ for _ in range(n):
 x1s.sort()
 x2s.sort()
 
+# print(x1s)
+
 for i in range(n):
     if dic[x1s[i]] == x2s[i]:
+        # print(x1s[i], x2s[i])
         cnt += 1
 
 print(cnt)
