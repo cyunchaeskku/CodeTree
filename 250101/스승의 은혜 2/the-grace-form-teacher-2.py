@@ -1,10 +1,11 @@
 import sys
 
 n, b = map(int, input().split())
-a = [
+_a = [
     int(input())
     for _ in range(n)
 ]
+
 
 ans = -sys.maxsize
 
@@ -13,7 +14,8 @@ for i in range(n):
     cnt = 0
     for j in range(n):
         if i == j:
-            a[j] /= 2
+            _a[j] /= 2
+        a = sorted(_a)
 
         for k in range(n):
             price += a[k]
@@ -23,7 +25,7 @@ for i in range(n):
                 cnt += 1
 
         if i == j:
-            a[j] *= 2
+            _a[j] *= 2
     ans = max(ans, cnt)
         
 print(ans)
