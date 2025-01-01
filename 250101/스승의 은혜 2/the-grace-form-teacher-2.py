@@ -6,6 +6,7 @@ _a = [
     for _ in range(n)
 ]
 
+a.sort()
 
 ans = -sys.maxsize
 
