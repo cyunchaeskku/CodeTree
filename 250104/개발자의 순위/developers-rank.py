@@ -13,8 +13,8 @@ for i in range(1, n+1):
         for j in range(n):
             if v[j] == i:
                 i_index = j
-        if i_index + 1 < n-1:
-            for j in range(i_index+1, n):
+        for j in range(n):
+            if j > i_index:
                 nums[i][v[j]] += 1
 
 
