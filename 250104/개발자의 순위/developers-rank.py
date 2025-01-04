@@ -22,8 +22,9 @@ for i in range(1, n+1):
 
 ans = 0
 for i in range(n+1):
-    for j in range(n):
-        if nums[i][j] == n-1:
+    for j in range(n+1):
+        if nums[i][j] == k:
             ans += 1
 
+# print(nums)
 print(ans)
