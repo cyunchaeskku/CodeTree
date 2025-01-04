@@ -23,9 +23,9 @@ for temp in range(0, 1001):
     for i in range(n):
         if temp < tAs[i]:
             work += c
-        if temp >= tAs[i] and temp < tBs[i]:
+        if temp >= tAs[i] and temp <= tBs[i]:
             work += g
-        if temp >= tBs[i]:
+        if temp > tBs[i]:
             work += h
 
     ans = max(ans, work)
