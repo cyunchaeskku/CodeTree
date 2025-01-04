@@ -17,7 +17,7 @@ for _ in range(n):
     min_temp = min(min_temp, ta)
     max_temp = max(max_temp, tb)
 
-for temp in range(min_temp-10, max_temp+10):
+for temp in range(0, 1001):
     work = 0
     
     for i in range(n):
