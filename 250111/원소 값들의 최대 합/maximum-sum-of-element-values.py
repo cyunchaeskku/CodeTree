@@ -14,3 +14,11 @@ for i in range(len(a)-1):
     ans = max(ans, sum)
 
 print(ans)
+
+
+'''
+5
+a[5-1] = 3
+a[3-1] = 4
+a[4-1] = 2
+'''
