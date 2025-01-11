@@ -4,14 +4,14 @@ a = list(map(int, input().split()))
 
 ans = -sys.maxsize
 
-for i in range(len(a)-1):
-    su = 0
+for i in range(len(a)):
+    sum = 0
     pos = i
-    su += a[pos]
+    sum += a[pos]
     for j in range(m-1):
         pos = a[pos] - 1
-        su += a[pos]
-    ans = max(ans, su)
+        sum += a[pos]
+    ans = max(ans, sum)
 
 print(ans)
 
