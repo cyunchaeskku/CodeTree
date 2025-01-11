@@ -19,7 +19,7 @@ for i in range(m):
         nr, nc = r + dxs[j], c + dys[j]
         if in_range(nr, nc) and a[nr][nc] == 1:
             cnt += 1
-    if cnt >= 3:
+    if cnt == 3:
         print(1)
     else:
         print(0)
