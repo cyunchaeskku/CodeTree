@@ -5,13 +5,13 @@ a = list(map(int, input().split()))
 ans = -sys.maxsize
 
 for i in range(len(a)-1):
-    sum = 0
+    su = 0
     pos = i
-    sum += a[pos]
+    su += a[pos]
     for j in range(m-1):
         pos = a[pos] - 1
-        sum += a[pos]
-    ans = max(ans, sum)
+        su += a[pos]
+    ans = max(ans, su)
 
 print(ans)
 
