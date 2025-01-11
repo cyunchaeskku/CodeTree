@@ -53,5 +53,6 @@ for i in range(1,10):
 
             if success:
                 ans += 1
+                break
 
 print(ans)
