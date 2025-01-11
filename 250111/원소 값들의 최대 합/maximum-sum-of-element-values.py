@@ -6,7 +6,7 @@ ans = -sys.maxsize
 
 for i in range(len(a)-1):
     sum = 0
-    pos = i - 1
+    pos = i
     sum += a[pos]
     for j in range(m-1):
         pos = a[pos] - 1
