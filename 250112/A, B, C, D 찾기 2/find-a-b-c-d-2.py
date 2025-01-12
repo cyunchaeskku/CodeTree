@@ -12,3 +12,4 @@ for a in range(1, max(arr) + 1):
                 a + b + c in arr and a + c + d in arr and b + c + d in arr and \
                 a + b + c + d in arr:
                     print(a, b, c, d)
+                    break
