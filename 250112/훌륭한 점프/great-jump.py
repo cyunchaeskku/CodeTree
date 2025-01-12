@@ -30,7 +30,7 @@ def is_possible(max_val):
     return True
 
 
-for i in range(1, max_val+1):
+for i in range(min(a[0], a[-1]), max_val + 1):
     if is_possible(i):
         ans = min(ans, i)
 
