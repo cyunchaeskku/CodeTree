@@ -1,7 +1,7 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-for i in range(1, max(arr)+1):
+for i in range(0, max(arr)+1):
     possible_arr = []
     success = True
     possible_arr.append(i)
