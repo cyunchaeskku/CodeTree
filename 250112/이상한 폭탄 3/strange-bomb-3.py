@@ -13,7 +13,7 @@ for v in arr:
 bomb_numbers = list(bomb_numbers)
 
 ans = 0
-max_boom_count = -sys.maxsize
+max_boom_count = 0
 
 for v in bomb_numbers:
     ar = arr.copy()
@@ -31,4 +31,7 @@ for v in bomb_numbers:
     if max_boom_count < boom_count:
         ans = v
         max_boom_count = boom_count
-print(ans)
+if max_boom_count == 0:
+    print(0)
+else:
+    print(ans)
