@@ -2,7 +2,7 @@ import sys
 
 arr = list(map(int, input().split()))
 
-for a in range(1, max(arr) + 1):
+for a in range(min(arr), max(arr) + 1):
     for b in range(a, max(arr) + 1):
         for c in range(b, max(arr) + 1):
             for d in range(c, max(arr) + 1):
