@@ -17,11 +17,11 @@ def is_possible(max_val):
 
     arr_size = len(available_indicies)
 
-    if arr_size == 1:
-        return False
+    # if arr_size == 1:
+    #     return False
 
-    if 0 not in available_indicies:
-        return False
+    # if 0 not in available_indicies:
+    #     return False
 
     for i in range(1, arr_size):
         if available_indicies[i] - available_indicies[i-1] > k:
