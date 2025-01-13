@@ -4,7 +4,7 @@ n,m = map(int, input().split())
 a = list(map(int, input().split()))
 
 MAX_A = 10_000
-ans = sys.maxsize
+ans = MAX_A
 
 for i in range(MAX_A + 1): 
     possible = True
