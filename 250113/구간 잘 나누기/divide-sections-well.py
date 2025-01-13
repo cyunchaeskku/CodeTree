@@ -6,7 +6,7 @@ a = list(map(int, input().split()))
 MAX_A = 10_000
 ans = MAX_A
 
-for i in range(MAX_A + 1): 
+for i in range(1, MAX_A + 1): 
     possible = True
     section = 1
 
