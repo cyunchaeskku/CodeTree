@@ -20,6 +20,6 @@ for i in range(MAX_A + 1): # 구간 합의 최댓값이 i일때, section 나누�
             cnt = 0
             section += 1
         cnt += a[j]
-    if possible and section == m:
+    if possible and section <= m:
         ans = min(ans, i)
 print(ans)
