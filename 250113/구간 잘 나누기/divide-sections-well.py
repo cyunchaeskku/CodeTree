@@ -1,40 +1,26 @@
-import sys
-
+MAX_A = 10_000
 n, m = map(int, input().split())
-arr = list()
-temp = list(map(int, input().split()))
 
-for i in range(n):
-    arr.append(temp[i])
-    arr.append(0)
+a = list(map(int, input().split()))
 
-del arr[2 * n - 1]
+ans = MAX_A
+for i in range(1, MAX_A + 1):
+    possible = True
+    section = 1
 
+    cnt = 0
+    for j in range(n):
+        if a[j] > i:
+            possible = False
+            break
+        
+        if cnt + a[j] > i:
+            cnt = 0
+            section += 1
 
-ans = sys.maxsize
+        cnt += a[j]
 
-# arr의 길이는 2 * n - 1
-
-for i in range(2 * n - 1):
-    for j in range(i + 1, 2 * n - 1):
-        ar = arr.copy()
-
-        range_sum = 0
-        max_range_sum = -sys.maxsize
-
-        if ar[i] > 0 or ar[j] > 0:
-            continue
-        ar[i], ar[j] = -1, -1
-
-
-
-        for k in range(2 * n - 1):
-            if ar[k] > - 1:
-                range_sum += ar[k]
-            if ar[k] == -1:
-                max_range_sum = max(max_range_sum, range_sum)
-                range_sum = 0
-        max_range_sum = max(range_sum, max_range_sum)
-        ans = min(ans, max_range_sum)
+    if possible and section <= m:
+        ans = min (ans, i)
 
 print(ans)
