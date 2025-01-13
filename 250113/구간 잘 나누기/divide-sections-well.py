@@ -6,7 +6,7 @@ a = list(map(int, input().split()))
 MAX_A = 10_000
 ans = sys.maxsize
 
-for i in range(MAX_A + 1): # 구간 합의 최댓값이 i일때, section 나누어지는 판단한다.
+for i in range(MAX_A + 1): 
     possible = True
     section = 1
 
@@ -20,6 +20,6 @@ for i in range(MAX_A + 1): # 구간 합의 최댓값이 i일때, section 나누�
             cnt = 0
             section += 1
         cnt += a[j]
-    if possible and section <= m:
+    if possible and section == m:
         ans = min(ans, i)
 print(ans)
