@@ -12,7 +12,7 @@ else:
         if y1 > b2:
             print("nonoverlapping")
         else:
-            if y2 < b2:
+            if y2 < b1:
                 print("nonoverlapping")
             else:
                 print("overlapping")
