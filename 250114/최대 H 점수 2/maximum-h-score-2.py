@@ -9,13 +9,13 @@ MAX_A = 100
 
 def get_H_score(arr):
     ans = -sys.maxsize
-    for v, idx in enumerate(arr):
+    for i in range(MAX_A + 1):
         cnt = 0
         for j in range(len(arr)):
-            if arr[j] >= v:
+            if arr[j] >= i:
                 cnt += 1
-        if cnt >= v:
-            ans = max(ans, v)
+        if cnt >= i:
+            ans = max(ans, i)
     return ans
 
 ans = -sys.maxsize
