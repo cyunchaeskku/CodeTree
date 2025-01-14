@@ -39,7 +39,7 @@ for h in range(MAX_A + 1 + 1): # 최대 점수가 h일때
     for i in range(N):
         if ar[i] < h and indicies[i] == False:
             ar[i] += 1
-            indicies = True
+            indicies[i] = True
             L_count += 1
         if L_count >= L:
             break
