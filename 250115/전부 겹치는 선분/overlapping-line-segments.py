@@ -1,33 +1,21 @@
 import sys
 
 n = int(input())
-
 a = [
     tuple(map(int, input().split()))
     for _ in range(n)
 ]
 
-min_val = sys.maxsize
-max_val = -sys.maxsize
+max_x1 = -sys.maxsize
+min_x2 = sys.maxsize
 
 for i in range(n):
-    min_val = min(min_val, min(a[i]))
-    max_val = max(max_val, max(a[i]))
+    x1, x2 = a[i]
+    max_x1 = max(max_x1, x1)
+    min_x2 = min(min_x2, x2)
 
-arr = [0 for _ in range(101)]
-
-for i in range(n):
-    for j in range(a[i][0], a[i][1] + 1):
-        arr[j] += 1
-
-# print(arr)
-success = False
-for v in arr:
-    if v >= n:
-        success = True
-        break
-
-if success:
-    print("Yes")
-else:
+if max_x1 > min_x2:
     print("No")
+else:
+    print("Yes")
+    
