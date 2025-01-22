@@ -16,9 +16,12 @@ for i in range(m):
     idx = ord(c) - 65
     if i >= p - 1:
         programmers[idx] = True
-    if u == 0:
-        for v in appeared_chrs:
-            programmers[ord(v) - 65] = True
+    if i == p-1 and u == 0:
+        # for v in appeared_chrs:
+        #     programmers[ord(v) - 65] = True
+        for v in programmers:
+            v = True
+
 
 
 for i, v in enumerate(programmers):
