@@ -16,7 +16,6 @@ for i in range(len(a) -1, 0, - 1):
                 break
             val = min(a[j], b[i] - a[i])
             cnt += val * abs(i-j)
-            print(val)
             a[j] -= val
             a[i] += val
     else:
