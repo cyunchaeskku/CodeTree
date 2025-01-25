@@ -7,7 +7,6 @@ a = [
     for _ in range(n)
 ]
 
-
 avg = int(sum(a) / n)
 ans = 0
 
