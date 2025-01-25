@@ -19,14 +19,19 @@ def find_min_idx(a):
 
     return min_idx
 
-ar = a.copy()    
 
 avg = sum(a) / n
 ans = 0
 
 for i in range(n):
     while a[i] > avg:
+        idx = find_min_idx(a)
+        # a[idx] += (avg - a[idx])
+        # a[i] -= (avg - a[idx])
+        # ans += (avg - a[idx])
+
         a[i] -= 1
-        a[find_min_idx(a)] += 1
+        a[idx] += 1
         ans += 1
+        
 print(ans)
