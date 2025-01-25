@@ -7,31 +7,20 @@ a = [
     for _ in range(n)
 ]
 
-def find_min_idx(a):
-    min_val = sys.maxsize
-    min_idx = 0
-    n = len(a)
 
-    for i in range(n):
-        if a[i] < min_val:
-            min_val = a[i]
-            min_idx = i
-
-    return min_idx
-
-
-avg = sum(a) / n
+avg = int(sum(a) / n)
 ans = 0
 
 for i in range(n):
-    while a[i] > avg:
-        idx = find_min_idx(a)
-        # a[idx] += (avg - a[idx])
-        # a[i] -= (avg - a[idx])
-        # ans += (avg - a[idx])
+    if a[i] > avg:
+        val = a[i] - avg
+        a[i] -= val
+        a[a.index(min(a))] += val
+        ans += val
+    elif a[i] < avg:
+        val = avg - a[i]
+        a[i] += val
+        a[a.index(max(a))] -= val
+        ans += val
 
-        a[i] -= 1
-        a[idx] += 1
-        ans += 1
-        
 print(ans)
