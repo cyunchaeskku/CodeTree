@@ -17,14 +17,25 @@ def calc_H_score(a):
             res = max(res, h)
     return res
 
-a.sort()
-if l == 0:
-    ans = max(ans, calc_H_score(a))
-else:
-    cnt = 0
-    for i in range(len(a)):
-        if a[i] >= calc_H_score(a):
-            for j in range(i, i + l):
-                a[j] += 1
-    ans = max(ans, calc_H_score(a))
+for h in range(101):
+    ar = a.copy()
+    ar.sort(reverse=True)
+    count = 0
+
+    indicies = [False for _ in range(n)]
+
+    for i, v in enumerate(ar):
+        if v >= h:
+            indicies[i] = True
+    
+    for i, v in enumerate(ar):
+        if indicies[i] == False and v < h and count < l:
+            ar[i] += 1
+            indicies[i] = True
+            count += 1
+        if count >= l:
+            break
+    
+    ans = max(ans, calc_H_score(ar))
+    
 print(ans)
