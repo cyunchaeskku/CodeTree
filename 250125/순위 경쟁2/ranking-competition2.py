@@ -20,21 +20,16 @@ for _ in range(n):
         if hall_of_fame != _hall_of_fame:
             cnt += 1
         hall_of_fame = _hall_of_fame
-
     elif score['A'] < score['B']:
         _hall_of_fame = ('B')
         if hall_of_fame != _hall_of_fame:
             cnt += 1
         hall_of_fame = _hall_of_fame
-        
-
     elif score['A'] == score['B']:
         _hall_of_fame = ('A', 'B')
         if hall_of_fame != _hall_of_fame:
             cnt += 1
         hall_of_fame = _hall_of_fame
         
-
-
 print(cnt)
 
