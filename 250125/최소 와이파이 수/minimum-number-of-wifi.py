@@ -15,6 +15,4 @@ for i in range(0 + m, n - m):
         ans += 1
         for j in range(i-m, i+m+1):
             wifi[j] = True
-
-    
 print(ans)
