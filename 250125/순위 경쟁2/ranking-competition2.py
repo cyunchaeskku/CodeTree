@@ -1,9 +1,7 @@
 import sys
 
 n = int(input())
-hall_of_fame = set()
-hall_of_fame.add('A')
-hall_of_fame.add('B')
+hall_of_fame = ('A','B')
 score = dict()
 score['A'] = 0
 score['B'] = 0
