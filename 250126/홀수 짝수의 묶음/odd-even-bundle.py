@@ -15,31 +15,44 @@ for i in range(n):
     else:
         odd_nums.append(a[i])
 
-print(even_nums)
-print(odd_nums)
-
 i, j = 0, 0
 even_or_odd = 0 # 0: even, 1: odd
 
 ans_list = []
+ans = 0
 
-while i + j <= n:
-    prefix_sum = 0
-    if even_or_odd == 0:
-        if i + 1 < len(even_nums):
-            prefix_sum += even_nums[i] + even_nums[i+1]
-            i += 2
-        elif j + 1 < len(odd_nums):
-            prefix_sum += odd_nums[j] + odd_nums[j+1]
-            j += 2
-    # else:
-    #     if i < len(even_nums) and j < len(odd_nums):
-    #         prefix_sum += even_nums[i] + odd_nums[j]
-    #         i += 1
-    #         j += 1
+while True:
+    if even_or_odd == 0: #even number
+        if len(even_nums) > 0:
+            val = even_nums.pop()
+            ans_list.append([val])
+            ans += 1
+        # 남은 짝수가 더 없을 때
+        else:
+            if len(odd_nums) >= 2:
+                val1 = odd_nums.pop()
+                val2 = odd_nums.pop()
+                ans_list.append([val1,val2])
+                ans += 1
+                
+    else: #odd number
+        if len(odd_nums) > 0:
+            if len(odd_nums) == 5:
+                val1 = odd_nums.pop()
+                val2 = odd_nums.pop()
+                val3 = odd_nums.pop()
+                ans_list.append([val1, val2, val3])
+                ans += 1
+            else:
+                val = odd_nums.pop()
+                ans_list.append([val])
+                ans += 1
+           
+           
 
     even_or_odd += 1
-    even_or_odd = (even_or_odd % 2)    
-    ans_list.append(prefix_sum)
+    even_or_odd = even_or_odd % 2
+    if len(even_nums) == 0 and len(odd_nums) == 0:
+        break
 
-print(ans_list)
+print(ans)
