@@ -4,9 +4,8 @@ a = list(map(int, input().split()))
 
 a.sort()
 
-A = min(a)
-a.remove(A)
-B = min(a)
-C = max(a) - min(a) - B
+A = a[0]
+B = a[1]
+C = a[len(a) - 1] - A - B
 
 print(A, B, C)
