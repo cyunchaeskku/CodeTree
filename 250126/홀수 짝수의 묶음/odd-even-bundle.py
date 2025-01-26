@@ -21,54 +21,27 @@ ans_list = []
 ans = 0
 
 while True:
-    if even_or_odd == 0: #even number
-        if len(odd_nums) == 0:
-            ans_list.append(even_nums)
-            even_nums = []
+    if even_or_odd == 0:
+        if len(even_nums) > 0:
+            ans_list.append([even_nums.pop()])
             ans += 1
-        elif len(even_nums) > 0:
-            if len(even_nums) == 1:
-                if len(odd_nums) == 2:
-                    ans += 1
-                    even_nums = []
-                    odd_nums = []
-                else:
-                    val = even_nums.pop()
-                    ans_list.append([val])
-                    ans += 1        
-            else:
-                val = even_nums.pop()
-                ans_list.append([val])
-                ans += 1
-        # 남은 짝수가 더 없을 때
+        elif len(odd_nums) >= 2:
+            val1 = odd_nums.pop()
+            val2 = odd_nums.pop()
+            ans_list.append([val1, val2])
+            ans += 1
         else:
-            if len(odd_nums) >= 2:
-                if len(odd_nums) == 4:
-                    ans += 1
-                    odd_nums = []
-                else:
-                    val1 = odd_nums.pop()
-                    val2 = odd_nums.pop()
-                    ans_list.append([val1,val2])
-                    ans += 1
-                
-    else: #odd number
+            # if len(even_nums) > 0 or len(odd_nums) > 0:
+            ans -= 1
+            break
+    else:
         if len(odd_nums) > 0:
-            if len(odd_nums) == 5:
-                val1 = odd_nums.pop()
-                val2 = odd_nums.pop()
-                val3 = odd_nums.pop()
-                ans_list.append([val1, val2, val3])
-                ans += 1
-            else:
-                val = odd_nums.pop()
-                ans_list.append([val])
-                ans += 1
-           
-           
-
-    even_or_odd += 1
-    even_or_odd = even_or_odd % 2
+            ans_list.append([odd_nums.pop(0)])
+            ans += 1
+        else:
+            break
+    
+    even_or_odd = (even_or_odd + 1) % 2
     if len(even_nums) == 0 and len(odd_nums) == 0:
         break
 
