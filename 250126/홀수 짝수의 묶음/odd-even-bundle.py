@@ -27,9 +27,19 @@ while True:
             even_nums = []
             ans += 1
         elif len(even_nums) > 0:
-            val = even_nums.pop()
-            ans_list.append([val])
-            ans += 1
+            if len(even_nums) == 1:
+                if len(odd_nums) == 2:
+                    ans += 1
+                    even_nums = []
+                    odd_nums = []
+                else:
+                    val = even_nums.pop()
+                    ans_list.append([val])
+                    ans += 1        
+            else:
+                val = even_nums.pop()
+                ans_list.append([val])
+                ans += 1
         # 남은 짝수가 더 없을 때
         else:
             if len(odd_nums) >= 2:
