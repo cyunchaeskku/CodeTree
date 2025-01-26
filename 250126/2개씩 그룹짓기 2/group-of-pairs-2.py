@@ -5,4 +5,8 @@ a = list(map(int, input().split()))
 
 a.sort()
 
-print(abs(a[n+1] - a[n-2]))
+ans = sys.maxsize
+for i in range(n):
+    ans = min(ans, a[i+n] - a[i])
+
+print(ans)
