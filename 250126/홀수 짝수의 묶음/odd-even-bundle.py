@@ -7,7 +7,6 @@ a = list(map(int, input().split()))
 even_nums = []
 odd_nums = []
 
-a.sort()
 
 for i in range(n):
     if a[i] % 2 == 0 :
@@ -23,7 +22,11 @@ ans = 0
 
 while True:
     if even_or_odd == 0: #even number
-        if len(even_nums) > 0:
+        if len(odd_nums) == 0:
+            ans_list.append(even_nums)
+            even_nums = []
+            ans += 1
+        elif len(even_nums) > 0:
             val = even_nums.pop()
             ans_list.append([val])
             ans += 1
