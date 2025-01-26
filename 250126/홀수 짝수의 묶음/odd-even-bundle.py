@@ -43,10 +43,14 @@ while True:
         # 남은 짝수가 더 없을 때
         else:
             if len(odd_nums) >= 2:
-                val1 = odd_nums.pop()
-                val2 = odd_nums.pop()
-                ans_list.append([val1,val2])
-                ans += 1
+                if len(odd_nums) == 4:
+                    ans += 1
+                    odd_nums = []
+                else:
+                    val1 = odd_nums.pop()
+                    val2 = odd_nums.pop()
+                    ans_list.append([val1,val2])
+                    ans += 1
                 
     else: #odd number
         if len(odd_nums) > 0:
