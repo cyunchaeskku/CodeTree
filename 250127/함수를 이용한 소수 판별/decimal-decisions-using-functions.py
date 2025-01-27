@@ -1,7 +1,7 @@
 import math
 
 def is_prime_number(n):
-    for i in range(2, int(math.sqrt(n)) + 1):
+    for i in range(2, int(math.sqrt(n)) + 2):
         if n % i == 0:
             return False
     return True
