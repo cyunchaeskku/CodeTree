@@ -9,7 +9,7 @@ def is_prime_number(n):
 a, b= map(int, input().split())
 ans = 0
 
-for i in range(a+1, b):
+for i in range(a, b+1):
     if is_prime_number(i):
         ans += i
 print(ans)
