@@ -18,7 +18,7 @@ for i in range(n):
         else:
             cnt += 1
     else:
-        cnt += 1
+        cnt = 1
     
 
 print(ans)
