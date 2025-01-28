@@ -21,5 +21,7 @@ for i in range(n):
                 cnt = 0
 
 ans = max(ans, cnt)
-
-print(ans)
+if ans == 0:
+    print(0)
+else:
+    print(ans)
