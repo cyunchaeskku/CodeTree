@@ -19,7 +19,7 @@ for i in range(n):
             cnt += 1
     else:
         cnt = 1
-ans = max(cnt)
+ans = max(cnt, ans)
     
 
 print(ans)
