@@ -11,7 +11,7 @@ for i in range(n):
         if a[i] > t:
             cnt = 1
     else:
-        if a[i] > t and a[i] > a[i-1]:
+        if a[i] > t and a[i-1] > t and a[i] > a[i-1]:
             cnt += 1
         else:
             ans = max(ans, cnt)
@@ -21,7 +21,5 @@ for i in range(n):
                 cnt = 0
 
 ans = max(ans, cnt)
-if ans == 0:
-    print(0)
-else:
-    print(ans)
+
+print(ans)
