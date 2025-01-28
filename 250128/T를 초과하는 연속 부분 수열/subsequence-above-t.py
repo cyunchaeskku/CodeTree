@@ -3,7 +3,7 @@ import sys
 n, t = map(int, input().split())
 a = list(map(int, input().split()))
 
-ans = - sys.maxsize
+ans = -sys.maxsize
 cnt = 0
 
 for i in range(n):
