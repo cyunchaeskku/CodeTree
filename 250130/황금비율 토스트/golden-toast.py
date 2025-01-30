@@ -87,9 +87,8 @@ for _ in range(m):
     if command_line[0] == 'P':        
         l.insert(it, command_line[2])
     if command_line[0] == 'D':
-        it = l.erase(it)
-        if it == l.end():
-            it = it.prev
+        if it != l.end():
+            it = l.erase(it)
     if command_line[0] == 'R':
         if it != l.end():
             it = it.next    
