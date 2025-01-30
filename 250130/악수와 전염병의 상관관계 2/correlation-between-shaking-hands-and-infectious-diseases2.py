@@ -19,9 +19,10 @@ for i in range(T):
     flag= False
     t,x,y = input_string[i]
     if programmers[x] == 1 and K_list[x] > 0: # x가 감염자일때
+        if programmers[y] == 0:
+            flag = True
         programmers[y] = 1
         K_list[x] -= 1
-        flag = True
     if flag == False and programmers[y] == 1 and K_list[y] > 0:
         programmers[x] = 1
         K_list[y] -= 1
