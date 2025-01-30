@@ -31,7 +31,8 @@ for i in range(m):
 
 ans = 0
 i,j = 0,0
-flag = False
+flag = True
+
 
 while i < min(len(a), len(b)) and j < min(len(a), len(b)):
     if i == 0 and j == 0:
