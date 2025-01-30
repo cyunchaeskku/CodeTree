@@ -82,13 +82,15 @@ it = l.end()
 for _ in range(m):
     command_line = input().strip()
     if command_line[0] == 'L':
-        it = it.prev
+        if it != l.begin():
+            it = it.prev
     if command_line[0] == 'P':        
         l.insert(it, command_line[2])
     if command_line[0] == 'D':
         it = l.erase(it)
     if command_line[0] == 'R':
-        it = it.next
+        if it != l.end():
+            it = it.next    
 
 
 
