@@ -2,7 +2,7 @@ import sys
 
 n = int(input())
 
-a = list(map(int, input()))
+a = list(map(int, input().split()))
 
 def bubble_sort(a, n):
     for i in range(n - 1):
